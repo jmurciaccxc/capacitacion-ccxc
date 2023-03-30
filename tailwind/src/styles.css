@@ -37,4 +37,95 @@
 }
 
 @layer components {
+  /*ESTULOS MENU*/
+  .menu-item {
+    @apply xs:mr-2
+    xs:ml-2
+    mr-5
+    ml-5
+    tracking-wider
+    flex-none
+    font-bebas
+    xs:flex-1;
+  }
+  /*ESTILOS BANNER*/
+  .meun-item-a {
+    @apply block transition duration-200 hover:text-azul-claro transform hover:scale-125;
+  }
+  .text-banner {
+    font-family: "Bebas Neue";
+    text-shadow: 2px 2px 1px black;
+  }
+  /* ESTILOS MENU TARGETAS*/
+  .card {
+    @apply group 
+      sm:flex-1
+      lg:h-80
+      border-2
+      border-gray-200
+      overflow-hidden
+      my-4
+      cursor-pointer
+      transition
+      duration-300
+      hover:bg-black
+      lg:m-5
+      h-52
+      md:m-2
+      w-40;
+  }
+
+  .card-item {
+    @apply block
+    w-full
+    h-20
+    text-5xl
+    text-center
+    mt-6
+    pt-5
+    mx-auto
+    transition
+    duration-300
+    lg:mt-12
+    lg:h-28;
+  }
+
+  .card-category {
+    @apply w-full
+      h-6
+      text-xl
+      font-bold
+      text-center
+      text-azul-oscuro  
+      transition 
+      duration-300
+      lg:text-lg;
+  }
+
+  .card-description {
+    @apply text-center
+    text-azul-oscuro
+    text-base
+    transition
+    duration-300
+    lg:block
+    hidden
+    lg:text-sm
+    lg:mt-6;
+  }
+
+  .article-header {
+    background: url("../img/pxgray.png"), white;
+    @apply font-bebas 
+    w-full 
+    block 
+    h-16 
+    text-5xl 
+    text-center 
+    font-normal 
+    tracking-widest
+    pt-4
+    border
+    shadow-header3D;
+  }
 }

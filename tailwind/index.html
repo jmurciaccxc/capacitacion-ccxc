@@ -4,37 +4,240 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
   </head>
   <body class="bg-body-pattern bg-scroll">
     <!--CABECERA-->
-    <header id="header" class="bg-black font-sans text-white h-20">
-      <div class="container mx-auto flex flex-row">
-        <div id="logo" class="flex-1">
-          <span class="symbol"> S </span>
-          <h3>TAILWIND</h3>
+    <header id="header" class="bg-black font-sans text-white h-20 xs:h-36">
+      <div class="container mx-auto flex flex-row w-11/12 xs:flex-col">
+        <div id="logo" class="flex-1 xs:m-aut overflow-hidden">
+          <div
+            class="bg-azul-claro w-64 text-center tracking-wider cursor-pointer group hover:text-black hover:bg-gray-200 flex justify-center items-center mt-4 ml-5 rounded"
+          >
+            <i
+              class="fa-solid fa-gear group-hover:animate-none group-hover:animate-from-bellow animate-spin-low text-2xl"
+            ></i>
+            <h3
+              class="block text-4xl mt-1.5 font-bebas ml-2 hover:animate-from-right overflow-hidden"
+            >
+              TAILWIND
+            </h3>
+          </div>
         </div>
         <nav class="flex-1">
-          <ul>
-            <li>
-              <a href="#">INICIO</a>
+          <ul
+            class="flex flex-row h-20 items-center md:justify-end text-2xl text-center mr-6 xs:mr-0 xs:text-center"
+          >
+            <li class="menu-item">
+              <a href="#" class="meun-item-a">INICIO</a>
             </li>
-            <li>
-              <a href="#">BLOG</a>
+            <li class="menu-item">
+              <a href="#" class="meun-item-a">BLOG</a>
             </li>
-            <li>
-              <a href="#">FORMACIÓN</a>
+            <li class="menu-item">
+              <a href="#" class="meun-item-a">FORMACIÓN</a>
             </li>
-            <li>
-              <a href="#">CONTACTO</a>
+            <li class="menu-item">
+              <a href="#" class="meun-item-a">CONTACTO</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
     <!--FIN CABECERA-->
-    <h1>la china que yo tenia se fue oa la capital</h1>
+    <!--INICIO SECCION DE INFORMACION-->
+    <section class="container w-11/12 mx-auto">
+      <!--INICIO BANNER-->
+      <div
+        id="banner"
+        class="h-28 w-full border-8 border-white overflow-hidden shadow xs:m-0 m-5 bg-banner bg-banner-position animation-bg-banner"
+      >
+        <h1
+          class="block text-banner text-white xs:text-2xl xs:mt-7 text-4xl font-normal tracking-wider m-7 mx-auto text-center font-bebas text-banner"
+        >
+          CURSOS DE DESARROLLO WEB CON VICTOR ROBLES
+        </h1>
+      </div>
+
+      <!--FIN BANNER-->
+      <!--INICIO TARGETAS-->
+      <div
+        id="cards"
+        class="flex flex-row flex-wrap lg:flex-nowrap justify-between"
+      >
+        <div class="card">
+          <i
+            class="fa-solid fa-code card-item transform group-hover:scale-150 group-hover:text-azul-claro group-hover:animate-show-card-icon"
+          ></i>
+          <h2
+            class="card-category group-hover:text-white group-hover:animate-show-card-category"
+          >
+            Desarrollo Web
+          </h2>
+          <p
+            class="card-description group-hover:text-white group-hover:animate-show-card-desc"
+          >
+            Aprende los principales lenguajes de desarrollo
+          </p>
+        </div>
+        <div class="card">
+          <i
+            class="fa-solid fa-laptop-file card-item group-hover:text-azul-claro group-hover:animate-show-card-icon transform group-hover:scale-150"
+          ></i>
+          <h2
+            class="card-category group-hover:text-white group-hover:animate-show-card-category"
+          >
+            Sistemas operativos
+          </h2>
+          <p
+            class="card-description group-hover:text-white group-hover:animate-show-card-desc"
+          >
+            Aprende sistemas operativos
+          </p>
+        </div>
+        <div class="card">
+          <i
+            class="fa-solid fa-gear card-item group-hover:text-azul-claro group-hover:animate-show-card-icon transform group-hover:scale-150"
+          ></i>
+          <h2
+            class="card-category group-hover:text-white group-hover:animate-show-card-category"
+          >
+            Hardware
+          </h2>
+          <p
+            class="card-description group-hover:text-white group-hover:animate-show-card-desc"
+          >
+            Conoce todo acerca del hardware
+          </p>
+        </div>
+        <div class="card">
+          <i
+            class="fa-solid fa-signal card-item group-hover:text-azul-claro group-hover:animate-show-card-icon transform group-hover:scale-150"
+          ></i>
+          <h2
+            class="card-category group-hover:text-white group-hover:animate-show-card-category"
+          >
+            Redes e internet
+          </h2>
+          <p
+            class="card-description group-hover:text-white group-hover:animate-show-card-desc"
+          >
+            Configura y administra redes y servidores
+          </p>
+        </div>
+        <div class="card">
+          <i
+            class="fa-solid fa-signal card-item group-hover:text-azul-claro group-hover:animate-show-card-icon transform group-hover:scale-150"
+          ></i>
+          <h2
+            class="card-category group-hover:text-white group-hover:animate-show-card-category"
+          >
+            Bases de datos
+          </h2>
+          <p
+            class="card-description group-hover:text-white group-hover:animate-show-card-desc"
+          >
+            Aprenda a trabajar en bases de datos
+          </p>
+        </div>
+      </div>
+
+      <!--FIN TARGETAS-->
+    </section>
+    <!--FIN SECCION DE INFORMACION-->
+    <!--INICIO CONTENIDO PRINCIPAL-->
+    <main class="container w-11/12 mt-4 mx-auto flex flex-row">
+      <aside
+        id="lateral"
+        class="border-4 order-2 flex-none w-72 min-h-full mt-5"
+      >
+        <h3>BUSCAR</h3>
+        <div id="search">
+          <form>
+            <input type="text" />
+            <input type="button" value="Buscar" />
+          </form>
+        </div>
+        <h3>LOGIN</h3>
+        <div id="login">
+          <form>
+            <label for="email">Usuario</label>
+            <input type="email" id="email" />
+
+            <label for="password">Usuario</label>
+            <input type="email" id="password" />
+
+            <input type="submit" value="Entrar" />
+            <input type="reset" value="Limpia" />
+
+            <a href="#">Registrate aqui</a>
+            <a href="#">¿Has olvidado tu contraseña?</a>
+          </form>
+        </div>
+        <h3>REDES SOCIALES</h3>
+        <div id="sicial media">
+          <div class="twitter">
+            <a href="#">Twitter</a>
+            <p>Twitter</p>
+          </div>
+          <div class="Facebook">
+            <a href="#">Facebook</a>
+            <p>Facebook</p>
+          </div>
+          <div class="Youtube">
+            <a href="#">Youtube</a>
+            <p>Youtube</p>
+          </div>
+        </div>
+        <h3>PATROCINADORES</h3>
+        <div id="sponsors"></div>
+      </aside>
+      <!--FIN BARRA LATERAL-->
+
+      <!--INICIO ARTICULOS-->
+      <section class="order-1 flex-grow w-72 mr-10">
+        <h2 class="article-header">Ultimos articulos</h2>
+        <article
+          class="w-full h-auto border border-gray-200 m-10 mx-auto bg-white text-black shadow-md"
+        >
+          <div
+            class="float-right bg-gray-800 text-white h-10 leading-6 p-2 -m-2.8 text-sm rounded-bl-lg"
+          >
+            <span class="m-2.5"> Fecha: 10 marzo </span>
+            <span class="m-2.5"> Categoria: Pruebas</span>
+          </div>
+          <h4>
+            <a
+              href="#"
+              class="font-semibold text-azul-oscuro hover:underline p-2"
+              >Titulo del articulo</a
+            >
+          </h4>
+          <p class="block mt-3 mb-3 text-base font-sans p-2">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, Lorem Ipsum has been the industry's standard
+            dummy text ever since the 1500s,
+          </p>
+        </article>
+      </section>
+
+      <!--FIN ARTICULOS-->
+    </main>
+    <!--FIN CONTENIDO PRINCIPAL-->
   </body>
 </html>
