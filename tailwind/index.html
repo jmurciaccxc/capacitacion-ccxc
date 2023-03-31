@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
     <title>Document</title>
@@ -32,7 +32,7 @@
               class="fa-solid fa-gear group-hover:animate-none group-hover:animate-from-bellow animate-spin-low text-2xl"
             ></i>
             <h3
-              class="block text-4xl mt-1.5 font-bebas ml-2 hover:animate-from-right overflow-hidden"
+              class="block text-4xl mt-1.5 font-bebas ml-2 overflow-hidden group-hover:animate-from-right"
             >
               TAILWIND
             </h3>
@@ -160,74 +160,195 @@
     </section>
     <!--FIN SECCION DE INFORMACION-->
     <!--INICIO CONTENIDO PRINCIPAL-->
-    <main class="container w-11/12 mt-4 mx-auto flex flex-row">
+    <main class="container w-11/12 mt-4 mx-auto flex md:flex-row xs:flex-col">
       <aside
         id="lateral"
-        class="border-4 order-2 flex-none w-72 min-h-full mt-5"
+        class="order-2 flex-none w-72 xs:w-11/12 xs:mx-auto min-h-full"
       >
-        <h3>BUSCAR</h3>
-        <div id="search">
+        <h3 class="aside-header">BUSCAR</h3>
+        <div
+          id="search"
+          class="w-11/12 h-7 m-2.5 mx-auto bg-white border-gray-200 rounded shadow-inner"
+        >
           <form>
-            <input type="text" />
-            <input type="button" value="Buscar" />
+            <input
+              type="text"
+              class="w-10/12 h-6 border-none pl-1.5 rounded-md bg-transparent text-gray-500 transition duration-300 outline-none focus:outline-none"
+            />
+            <i
+              class="fa-solid fa-magnifying-glass cursor-pointer text-base bg-transparent border-none text-gray-500 pl-1.5 p-2"
+            ></i>
           </form>
         </div>
-        <h3>LOGIN</h3>
-        <div id="login">
+        <h3 class="aside-header">LOGIN</h3>
+        <div id="login" class="aside-box">
           <form>
-            <label for="email">Usuario</label>
-            <input type="email" id="email" />
+            <label for="email" class="login-icon"
+              ><i class="fa-solid fa-user"></i
+            ></label>
+            <input type="email" id="email" class="login-input" />
 
-            <label for="password">Usuario</label>
-            <input type="email" id="password" />
+            <label for="password" class="login-icon text-xl ml-7 mt-6"
+              ><i class="fa-solid fa-lock"></i
+            ></label>
+            <input type="password" id="password" class="login-input" />
 
-            <input type="submit" value="Entrar" />
-            <input type="reset" value="Limpia" />
+            <input type="submit" value="Entrar" class="login-button" />
+            <input type="reset" value="Limpia" class="login-button ml-1" />
 
-            <a href="#">Registrate aqui</a>
-            <a href="#">¿Has olvidado tu contraseña?</a>
+            <a href="#" class="login-link">Registrate aqui</a>
+            <a href="#" class="login-link">¿Has olvidado tu contraseña?</a>
           </form>
         </div>
-        <h3>REDES SOCIALES</h3>
-        <div id="sicial media">
-          <div class="twitter">
-            <a href="#">Twitter</a>
-            <p>Twitter</p>
+        <h3 class="aside-header">REDES SOCIALES</h3>
+        <div id="sicial media" class="aside-box h-48">
+          <div class="group twitter">
+            <i class="fa-brands fa-twitter social-icon"></i>
+            <p
+              class="social-overlay group-hover:opacity-100 group-hover:transform group-hover:translate-x-1"
+            >
+              Twitter
+            </p>
           </div>
-          <div class="Facebook">
-            <a href="#">Facebook</a>
-            <p>Facebook</p>
+          <div class="Facebook group">
+            <i class="fa-brands fa-facebook social-icon"></i>
+            <p
+              class="social-overlay group-hover:opacity-100 group-hover:transform group-hover:translate-x-1"
+            >
+              Facebook
+            </p>
           </div>
-          <div class="Youtube">
-            <a href="#">Youtube</a>
-            <p>Youtube</p>
+          <div class="Youtube group">
+            <i class="fa-brands fa-youtube social-icon"></i>
+            <p
+              class="social-overlay group-hover:opacity-100 group-hover:transform group-hover:translate-x-1"
+            >
+              Youtube
+            </p>
           </div>
         </div>
-        <h3>PATROCINADORES</h3>
-        <div id="sponsors"></div>
+        <h3 class="aside-header">PATROCINADORES</h3>
+        <div id="sponsors" class="aside-box"></div>
       </aside>
       <!--FIN BARRA LATERAL-->
 
       <!--INICIO ARTICULOS-->
-      <section class="order-1 flex-grow w-72 mr-10">
+      <section class="order-1 flex-grow w-72 xs:w-11/12 xs:mx-auto mr-10">
         <h2 class="article-header">Ultimos articulos</h2>
-        <article
-          class="w-full h-auto border border-gray-200 m-10 mx-auto bg-white text-black shadow-md"
-        >
-          <div
-            class="float-right bg-gray-800 text-white h-10 leading-6 p-2 -m-2.8 text-sm rounded-bl-lg"
-          >
-            <span class="m-2.5"> Fecha: 10 marzo </span>
-            <span class="m-2.5"> Categoria: Pruebas</span>
+        <article class="article-item">
+          <div class="article-data">
+            <span> Fecha: 10 marzo </span>
+            <span> Categoria: Pruebas</span>
           </div>
-          <h4>
-            <a
-              href="#"
-              class="font-semibold text-azul-oscuro hover:underline p-2"
-              >Titulo del articulo</a
-            >
+          <h4 class="article-head">
+            <a href="#" class="article-head">Titulo del articulo</a>
           </h4>
-          <p class="block mt-3 mb-3 text-base font-sans p-2">
+          <p class="article-description">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, Lorem Ipsum has been the industry's standard
+            dummy text ever since the 1500s,
+          </p>
+        </article>
+        <article class="article-item">
+          <div class="article-data">
+            <span> Fecha: 10 marzo </span>
+            <span> Categoria: Pruebas</span>
+          </div>
+          <h4 class="article-head">
+            <a href="#" class="article-head">Titulo del articulo</a>
+          </h4>
+          <p class="article-description">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, Lorem Ipsum has been the industry's standard
+            dummy text ever since the 1500s,
+          </p>
+        </article>
+        <article class="article-item">
+          <div class="article-data">
+            <span> Fecha: 10 marzo </span>
+            <span> Categoria: Pruebas</span>
+          </div>
+          <h4 class="article-head">
+            <a href="#" class="article-head">Titulo del articulo</a>
+          </h4>
+          <p class="article-description">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, Lorem Ipsum has been the industry's standard
+            dummy text ever since the 1500s,
+          </p>
+        </article>
+        <article class="article-item">
+          <div class="article-data">
+            <span> Fecha: 10 marzo </span>
+            <span> Categoria: Pruebas</span>
+          </div>
+          <h4 class="article-head">
+            <a href="#" class="article-head">Titulo del articulo</a>
+          </h4>
+          <p class="article-description">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, Lorem Ipsum has been the industry's standard
+            dummy text ever since the 1500s,
+          </p>
+        </article>
+        <article class="article-item">
+          <div class="article-data">
+            <span> Fecha: 10 marzo </span>
+            <span> Categoria: Pruebas</span>
+          </div>
+          <h4 class="article-head">
+            <a href="#" class="article-head">Titulo del articulo</a>
+          </h4>
+          <p class="article-description">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, Lorem Ipsum has been the industry's standard
+            dummy text ever since the 1500s,
+          </p>
+        </article>
+        <article class="article-item">
+          <div class="article-data">
+            <span> Fecha: 10 marzo </span>
+            <span> Categoria: Pruebas</span>
+          </div>
+          <h4 class="article-head">
+            <a href="#" class="article-head">Titulo del articulo</a>
+          </h4>
+          <p class="article-description">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, Lorem Ipsum has been the industry's standard
+            dummy text ever since the 1500s,
+          </p>
+        </article>
+        <article class="article-item">
+          <div class="article-data">
+            <span> Fecha: 10 marzo </span>
+            <span> Categoria: Pruebas</span>
+          </div>
+          <h4 class="article-head">
+            <a href="#" class="article-head">Titulo del articulo</a>
+          </h4>
+          <p class="article-description">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, Lorem Ipsum has been the industry's standard
+            dummy text ever since the 1500s,
+          </p>
+        </article>
+        <article class="article-item">
+          <div class="article-data">
+            <span> Fecha: 10 marzo </span>
+            <span> Categoria: Pruebas</span>
+          </div>
+          <h4 class="article-head">
+            <a href="#" class="article-head">Titulo del articulo</a>
+          </h4>
+          <p class="article-description">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, Lorem Ipsum has been the industry's standard
@@ -239,5 +360,63 @@
       <!--FIN ARTICULOS-->
     </main>
     <!--FIN CONTENIDO PRINCIPAL-->
+    <!--INICIO PIE DE PAGINA-->
+    <footer class="w-full h-auto bg-black text-white overflow-hidden">
+      <div class="container mx-auto flex w-11/12 flex-col lg:flex-row p-4">
+        <div id="menu-footer" class="footer-box">
+          <h5 class="footer-header">MENÚ</h5>
+          <ul class="footer-menu">
+            <li><a href="#">INICIO</a></li>
+            <li><a href="#">BLOG</a></li>
+            <li><a href="#">FORMACIÓN</a></li>
+            <li><a href="#">CONTACTO</a></li>
+          </ul>
+        </div>
+        <div class="footer-box">
+          <h5 class="footer-header">¿DONDE ESETAMOS?</h5>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1987.760559464092!2d-74.2684033!3d4.8519505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f7e359a51b495%3A0x1df5ca3d1ec2bcee!2sPiqueteadero%20Obando!5e0!3m2!1sen!2sco!4v1680197138644!5m2!1sen!2sco"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            class="w-full h-72 mt-3 border-4 border-gray-400 rounded-md shadow-md"
+          ></iframe>
+        </div>
+        <div id="inf" class="footer-box">
+          <h5 class="footer-header">Desarrollado con</h5>
+          <p class="mb-6 text-center">
+            <img
+              src="img/html5-badge-h-css3-graphics-multimedia-performance-semantics.png"
+              alt="html"
+              class="black mx-auto"
+            />
+          </p>
+          <h5 class="footer-header">Optimizado por</h5>
+          <div class="browsers flex flex-row space-x-5 mb-6">
+            <a href="#">
+              <img src="img/firefox-icon.png" />
+            </a>
+            <a href="#">
+              <img src="img/android.png" />
+            </a>
+            <a href="#">
+              <img src="img/Opera_256x256.png" />
+            </a>
+            <a href="#">
+              <img src="img/ios.png" />
+            </a>
+            <a href="#">
+              <img src="img/safari.png" />
+            </a>
+          </div>
+          <h5 class="footer-header">AUTOR</h5>
+          <p>&copy; Sebastian Murcia</p>
+        </div>
+      </div>
+    </footer>
+    <!--FIN PIE DE PAGINA-->
   </body>
 </html>
